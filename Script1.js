@@ -1,6 +1,22 @@
 // JavaScript source code
 console.log("Script is running")
 
+function addheader(){
+    console.log("adding header");
+    var header = document.createElement("div");
+    header.className = "header";
+    document.body.appendChild(header);
+}
+
+console.log("adding columns");
+var columnleft = document.createElement("div");
+columnleft.className = "columnleft";
+document.body.appendChild(columnleft);
+
+var columnright = document.createElement("div");
+columnright.className = "columnright";
+document.body.appendChild(columnright);
+
 // when called this function will add a drop down menu
 function dropDown() {
     console.log("adding drop down list")
@@ -54,8 +70,8 @@ function dropDown() {
     //  adding all elements to document body
     button.appendChild(fullList);
     dropDownDiv.appendChild(button);
-    document.body.appendChild(dropDownDiv);
-
+    columnleft.appendChild(dropDownDiv);
 }
 
+addheader();
 dropDown();
