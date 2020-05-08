@@ -5,9 +5,12 @@ function addheader(){
     console.log("adding header");
     var header = document.createElement("div");
     header.className = "header";
+    var text = document.createTextNode("HEADER"); 
+    header.appendChild(text);
     document.body.appendChild(header);
 }
 
+/* this could also be set into a function like the header function, I did it this way so the div is global and reachable for dropDown function */
 console.log("adding columns");
 var columnleft = document.createElement("div");
 columnleft.className = "columnleft";
